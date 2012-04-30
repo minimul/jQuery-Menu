@@ -53,6 +53,8 @@ function Menu(caller, options){
 			detectV: true, // do vertical collision detection
 			linkToFront: false
 		},
+    flyoutWidth: null,
+    shiftFlyoutFromTop: 0,
 		showSpeed: 200, // show/hide speed in milliseconds
 		callerOnState: 'ui-state-active', // class to change the appearance of the link/button when the menu is showing
 		loadingState: 'ui-state-loading', // class added to the link/button while the menu is created

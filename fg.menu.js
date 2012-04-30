@@ -244,10 +244,10 @@ function Menu(caller, options){
 	};
 	
 	this.chooseItem = function(item){
+    if( options.onChoosen && $.isFunction(options.onChoosen) )
+      options.onChoosen($(item),menu,caller);
+    else
 		menu.kill();
-		// edit this for your own custom function/callback:
-		$('#menuSelection').text($(item).text());	
-		location.href = $(item).attr('href');
 	};
 };
 
